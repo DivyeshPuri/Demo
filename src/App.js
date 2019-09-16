@@ -17,7 +17,7 @@ const App = () => {
           <div className="uk-container uk-width-3-4 uk-align-center">
             {
               states.posts.map((data, index) => (
-                <List data={data} key={index} />
+                <List data={data} key={data.id} />
               ))
             }
           </div> :

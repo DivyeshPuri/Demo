@@ -19,6 +19,12 @@ export const rootReducer = (state = initState, action) => {
         clicked: false,
         posts: action.posts
       }
+    case 'DELETE_POST':
+      const newPosts = state.posts.filter(post => post.id !== action.id)
+      return {
+        ...state,
+        posts: newPosts
+      }
     default:
       return state
   }

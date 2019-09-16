@@ -17,6 +17,13 @@ export function getPosts() {
   }
 }
 
+export const deletePost = (id) => {
+  return {
+    type: 'DELETE_POST',
+    id
+  }
+}
+
 export const requestPosts = () => {
   return {
     type: 'REQUEST_POST',
